@@ -23,7 +23,7 @@ but this becomes problematic when handling newer Android APIs. This library solv
 
 Uses
 ----
-Use Status Bar Colors when you need manipulate the Android status bar without worrying too much about implementation details and deprecated code. 
+Use Status Bar Colors when you need to manipulate the Android status bar without worrying too much about implementation details and deprecated code. 
 
 Usage
 -----
@@ -42,8 +42,15 @@ val blueColor = ContextCompat.getColor(this, R.color.blue)
 StatusBarColors.setStatusBarColor(activity, blueColor, 50)
 ```
 
+- To get the current status bar color:
+```KOTLIN
+  StatusBarColors.getStatusBarColor(activity)
+```
+
 - To change the status bar color to a gradient color, you would need a `View` which is anchored directly under the status bar. This is usually a `Toolbar`
 or an `AppbarLayout`. The trick here is that the status bar goes transparent and uses the background of the `View` directly underneath it as its background.
+**NOTE:** The `View`'s background **MUST** be a [GradientDrawable](https://developer.android.com/reference/android/graphics/drawable/GradientDrawable).
+See sample implementation for more details.
 Create a `Toolbar`:
 ```XML
 <androidx.appcompat.widget.Toolbar
@@ -87,7 +94,7 @@ StatusBarColors.getDefaultStatusBarHeight(context)
 
 You can also listen for changes to the status bar background color, gradient background color and transparency changes.
 - Listen for gradient color changes:
-- ```KOTLIN
+```KOTLIN
 StatusBarColors.apply {
     setGradientColor(this@MainActivity, mToolbar)
     statusBarColorChangeListener = object: StatusBarColors.OnStatusBarColorChangeListener {

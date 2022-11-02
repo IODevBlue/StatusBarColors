@@ -43,7 +43,6 @@ object StatusBarColors {
      * @param color The color to set as the Status bar background color.
      * @param alpha The alpha transparency to apply on the [color].
      * @see Activity.setStatusBarColor
-     * @see Fragment.setStatusBarColor
      */
     @JvmStatic
     fun setStatusBarColor(activity: Activity, @ColorInt color: Int, @IntRange(from = 0, to = 255) alpha: Int = DEFAULT_ALPHA) {
@@ -87,7 +86,6 @@ object StatusBarColors {
      * @param view The view anchored directly at the bottom of the status bar
      * with a gradient colored background to sync with the status bar, preferably a [Toolbar].
      * @see Activity.setGradientColor
-     * @see Fragment.setGradientColor
      */
     @JvmStatic
     fun setGradientColor(activity: Activity, view: View) {
@@ -115,7 +113,6 @@ object StatusBarColors {
      * @param activity The current [Activity].
      * @see WindowCompat.setDecorFitsSystemWindows
      * @see Activity.setTransparentForWindow
-     * @see Fragment.setTransparentForWindow
      */
     @JvmStatic
     fun setTransparentForWindow(activity: Activity) {
@@ -136,6 +133,7 @@ object StatusBarColors {
      * to give the illusion that the status bar is still there.
      * @param context The current [Context].
      * @param view The [View] which a top padding should be added.
+     * @see Activity.setPaddingTop
      */
     @JvmStatic
     fun setPaddingTop(context: Context, view: View) {

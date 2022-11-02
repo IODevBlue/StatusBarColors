@@ -14,6 +14,17 @@ import androidx.core.view.WindowCompat
 import com.blueiobase.api.android.statusbarcolors.StatusBarColors.getDefaultStatusBarHeight
 
 /**
+ * Extension function on an [Activity] to get the current color of the status bar.
+ *
+ * If the return value is 0, then the status bar is transparent.
+ * @return The current color of the status bar for this [Activity].
+ * @see StatusBarColors.getStatusBarColor
+ */
+fun Activity.getStatusBarColor(): Int {
+    return this.window.statusBarColor
+}
+
+/**
  * Extension function on an [Activity] to set the color of the Status bar.
  * @param color The color to set as the Status bar background color.
  * @param alpha The alpha transparency to apply on the [color].

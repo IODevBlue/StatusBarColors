@@ -14,7 +14,6 @@ import androidx.annotation.IntRange
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.fragment.app.Fragment
 
 
 /**
@@ -36,6 +35,19 @@ object StatusBarColors {
     /** Listener for changes to the icon colors on the status bar. **/
     @JvmStatic
     var statusBarIconColorChangeListener: OnStatusBarIconColorChangeListener? = null
+
+    /**
+     * Returns the current color of the status bar.
+     *
+     * If the return value is 0, then the status bar is transparent.
+     * @param activity The current [Activity].
+     * @return The current color of the status bar for the [activity].
+     * @see Activity.getStatusBarColor
+     */
+    @JvmStatic
+    fun getStatusBarColor(activity: Activity): Int {
+        return activity.window.statusBarColor
+    }
 
     /**
      * Sets the color of the Status bar.

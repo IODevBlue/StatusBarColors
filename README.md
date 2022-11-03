@@ -136,6 +136,11 @@ Java Interoperability
 This library is completely interoperable with Java projects.
 
 
+Changelog
+---------
+* **1.0.0**
+  * Initial release
+  
 ## License
     Copyright (C) 2022 IO DevBlue
 

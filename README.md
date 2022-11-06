@@ -8,7 +8,6 @@ Dependencies
 The sample implementation of this library uses [DesignColors](https://github.com/IODevBlue/DesignColors) to provide random colors.
 This is already bundled into the sample project.
 
-
 Installation
 ------------
 - The main file (`StatusBarColors.kt`) is a singleton object class which can be copied directly to your working directory. It contains no
@@ -41,6 +40,7 @@ StatusBarColors.setStatusBarColor(activity, blueColor)
 val blueColor = ContextCompat.getColor(this, R.color.blue)
 StatusBarColors.setStatusBarColor(activity, blueColor, 50)
 ```
+<p align="center"><img src="/art/change_color.gif" alt="Change Color"></p>
 
 - To get the current status bar color:
 ```KOTLIN
@@ -67,11 +67,17 @@ val gradientDrawable = GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,
 mToolbar.background = gradientDrawable
 StatusBarColors.setGradientColor(activity, mToolbar)
 ```
+Gradient Background:
+<p align="center"><img src="/art/gradient (1).png" alt="Gradient Background"></p>
+<p align="center"><img src="/art/gradient (2).png" alt="Gradient Background"></p>
 
 - To make the status bar transparent for the current `Activity`:
 ```KOTLIN
 StatusBarColors.setTransparentForWindow(activity)
 ```
+<p align="center"><img src="/art/transparent (1).png" alt="Transparent Background"></p>
+<p align="center"><img src="/art/transparent (2).png" alt="Transparent Background"></p>
+<p align="center"><img src="/art/transparent (3).png" alt="Transparent Background"></p>
 
 - In situations where you have a transparent status bar and you need to add a padding to give an illusion that the status bar is still available or 
 in any similar situation:
@@ -86,6 +92,14 @@ The `view` parameter is the `View` or `ViewGroup` anchored directly under the st
 StatusBarColors.setDarkStatusBarIcons(activity) //switch to dark tinted icons
 StatusBarColors.setLightStatusBarIcons(activity) //switch to light colored icons
 ```
+Light Mode:
+<p align="center"><img src="/art/light_mode (2).png" alt="Transparent Background"></p>
+<p align="center"><img src="/art/light_mode (1).png" alt="Transparent Background"></p>
+
+Dark Mode:
+<p align="center"><img src="/art/dark_mode (1).png" alt="Transparent Background"></p>
+<p align="center"><img src="/art/dark_mode (2).png" alt="Transparent Background"></p>
+
 
 - To retrieve the default height of the status bar:
 ```KOTLIN

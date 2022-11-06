@@ -47,10 +47,13 @@ StatusBarColors.setStatusBarColor(activity, blueColor, 50)
   StatusBarColors.getStatusBarColor(activity)
 ```
 
+
 - To change the status bar color to a gradient color, you would need a `View` which is anchored directly under the status bar. This is usually a `Toolbar`
 or an `AppbarLayout`. The trick here is that the status bar goes transparent and uses the background of the `View` directly underneath it as its background.
+
 **NOTE:** The `View`'s background **MUST** be a [GradientDrawable](https://developer.android.com/reference/android/graphics/drawable/GradientDrawable).
 See sample implementation for more details.
+
 Create a `Toolbar`:
 ```XML
 <androidx.appcompat.widget.Toolbar
@@ -59,7 +62,7 @@ android:layout_width="match_parent"
 android:layout_height="?attr/actionBarSize"
 android:background="@color/blue"/>
 ```
-- Retrieve the `Toolbar` and set its background to a `GradientDrawable`:
+Retrieve the `Toolbar` and set its background to a `GradientDrawable`:
 ```KOTLIN
 val mToolbar = findViewById<Toolbar>(R.id.toolbar)
 val colors = intArrayOf(0xff000000, 0xff000000)
@@ -67,9 +70,9 @@ val gradientDrawable = GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,
 mToolbar.background = gradientDrawable
 StatusBarColors.setGradientColor(activity, mToolbar)
 ```
-Gradient Background:
 <p align="center"><img src="/art/gradient (1).png" alt="Gradient Background"></p>
 <p align="center"><img src="/art/gradient (2).png" alt="Gradient Background"></p>
+
 
 - To make the status bar transparent for the current `Activity`:
 ```KOTLIN

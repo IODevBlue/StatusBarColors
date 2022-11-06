@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/main_blue"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="@dimen/padding_150"
+            android:layout_height="@dimen/padding_100"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toolbar"
+            android:text="@string/change_color"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="@dimen/padding_150"
+            android:layout_height="@dimen/padding_100"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="@dimen/padding_20"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/toolbar"
+            android:padding="10dp"
+            android:text="@string/change_transparency"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="@dimen/padding_150"
+            android:layout_height="@dimen/padding_100"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn"
+            android:text="@string/change_gradient"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="@dimen/padding_150"
+            android:layout_height="@dimen/padding_100"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="@dimen/padding_20"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/btn1"
+            android:padding="10dp"
+            android:text="@string/fragment_usage"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="@dimen/padding_150"
+            android:layout_height="@dimen/padding_100"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn2"
+            android:text="@string/light_mode_icons"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="@dimen/padding_150"
+            android:layout_height="@dimen/padding_100"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="@dimen/padding_20"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/btn3"
+            android:padding="10dp"
+            android:text="@string/dark_mode_icons"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

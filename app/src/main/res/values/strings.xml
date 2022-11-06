@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Status Bar Colors</string>
+    <string name="fragment_usage">Fragment Usage</string>
+    <string name="change_gradient">Change Gradient Color</string>
+    <string name="change_transparency">Change Transparency</string>
+    <string name="change_color">Change Color</string>
+    <string name="light_mode_icons">Light Mode Icons</string>
+    <string name="dark_mode_icons">Dark Mode Icons</string>
+    <string name="change_wallpaper">Change wallpaper</string>
+</resources>
